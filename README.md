@@ -156,3 +156,7 @@ node simulate.js
 ```
 
 The script will automatically open a headless browser, visit the homepage, navigate to the Disasters page, and repeat the process multiple times to simulate user activity. This allows you to observe LaunchDarkly metric tracking and experiment data population. The executablePath is configured for Chrome on a Mac so it will need to be changed if you have a different setup.
+
+### GitHub Actions Integration
+
+The **Find Code References in Pull Request** GitHub Actions workflow runs automatically when pull requests are opened or updated in this repository.
