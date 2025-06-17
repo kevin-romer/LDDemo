@@ -111,7 +111,7 @@ http://localhost:3000
 ### Resource Optimization Module Flag
 
 * Enables the Resource Optimization module.
-* The `/resource-optimization` endpoint will intentionally crash the backend server when accessed to demonstrate instant rollback.
+* The `/resource-optimization` endpoint will intentionally crash the backend server when accessed to demonstrate feature flag rollback.
 * PM2 restarts the backend automatically after failure.
 
 ### New Optimization Feature Flag
