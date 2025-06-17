@@ -61,6 +61,7 @@ app.get('/resource-optimization', async (req, res) => {
   try {
     const resourceModuleDeployed = await client.variation('resource-optimization-module', context, false);
     const aiModuleDeployed = await client.variation('new-optimization-feature', context, false);
+    const crashFixTest = await client.variation('crash-fix-test', context, false);
 
     if (resourceModuleDeployed) {
       if (aiModuleDeployed) {
@@ -77,10 +78,9 @@ app.get('/resource-optimization', async (req, res) => {
         res.json(cachedOptimizedData);
       }
       else {
-        crash();
+        if (crashFixTest) res.json(resourceOptimization);
+        else crash();
       }
-    } else {
-      res.json(resourceOptimization);
     }
   } catch (err) {
     console.error("LaunchDarkly evaluation failed", err);
