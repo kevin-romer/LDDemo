@@ -5,7 +5,7 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router';
 import { ApiProvider } from './context/ApiProvider.tsx';
 
-const randomUserNumber = String(Math.floor(Math.random() * 100) + 1).padStart(3, '0');
+const randomUserNumber = String(Math.floor(Math.random() * 200) + 1).padStart(3, '0');
 
 const context = {
   kind: 'user',
