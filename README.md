@@ -155,4 +155,4 @@ npm install
 node simulate.js
 ```
 
-The script will automatically open a headless browser, visit the homepage, navigate to the Resource Optimization page, and repeat the process multiple times to simulate user activity. This allows you to observe LaunchDarkly metric tracking and experiment data population. The executablePath is configured for Chrome on a Mac so it will need to be changed if you have a different setup.
+The script will automatically open a headless browser, visit the homepage, navigate to the Disasters page, and repeat the process multiple times to simulate user activity. This allows you to observe LaunchDarkly metric tracking and experiment data population. The executablePath is configured for Chrome on a Mac so it will need to be changed if you have a different setup.
