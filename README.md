@@ -117,3 +117,4 @@ http://localhost:3000
 
 * Enables AI-powered resource optimization using OpenAI.
 * Results are cached for five minutes to limit calls to OpenAI.
+* Enable both this flag and Resource Optimization Module to demonstrate this
