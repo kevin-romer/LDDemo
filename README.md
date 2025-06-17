@@ -55,6 +55,7 @@ Run the seeder script to create flags, metrics, and experiments:
 
 ```
 cd seed
+npm install
 node seedData.js
 ```
 
@@ -118,3 +119,40 @@ http://localhost:3000
 * Enables AI-powered resource optimization using OpenAI.
 * Results are cached for five minutes to limit calls to OpenAI.
 * Enable both this flag and Resource Optimization Module to demonstrate this
+
+## Context
+
+The frontend provides LaunchDarkly with user context for targeting. The context includes a user key that can be used to demonstrate feature flag targeting behavior.
+
+### Targeting Rule Example
+
+To test context-based targeting, add a rule to the **Preparedness Resources** flag in LaunchDarkly:
+
+**If user key contains `demo-user-001`, serve Off.**
+
+#### Instructions
+
+1. In LaunchDarkly, go to **Feature Flags**.
+2. Select the **Preparedness Resources** flag.
+3. Under **Targeting configuration**, click **+** and **build a custom rule**.
+4. Select **User key** as the attribute.
+5. Set the condition:
+   `User key` `contains` `demo-user-001`
+6. Set the rule to **Serve Off**.
+7. Save changes.
+
+This rule ensures that any user whose key includes `demo-user-001` will not see the Preparedness Resources page, allowing you to verify targeting behavior based on LaunchDarkly context. The same behavior can be accomplished by adding a **target individuals** rule and targetting the same user.
+
+## Test Script: Simulate Traffic
+
+The project includes a test script that uses Puppeteer to simulate user traffic to the platform. This can be used to generate activity for metrics and experiments.
+
+### Setup
+
+```
+cd text
+npm install
+node simulate.js
+```
+
+The script will automatically open a headless browser, visit the homepage, navigate to the Resource Optimization page, and repeat the process multiple times to simulate user activity. This allows you to observe LaunchDarkly metric tracking and experiment data population. The executablePath is configured for Chrome on a Mac so it will need to be changed if you have a different setup.
