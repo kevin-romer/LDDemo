@@ -105,7 +105,7 @@ http://localhost:3000
 
 ### Active Disasters Flag
 
-* Enables display of active disaster data and navigation to the disasters page.
+* Enables display of active disaster card as alternative navigation to the disasters page.
 * Experiment is run based on page views of the disasters page.
 
 ### Resource Optimization Module Flag

@@ -4,6 +4,7 @@ const metrics = [
     name: "Home page viewed",
     kind: "pageview",
     description: "Average page views per user",
+    unit: "count",
     urls: [{
       kind: "exact",
       url: "http://localhost:3000"
@@ -14,6 +15,7 @@ const metrics = [
     name: "Disasters page viewed",
     kind: "pageview",
     description: "Average page views per user",
+    unit: "count",
     urls: [{
       kind: "exact",
       url: "http://localhost:3000/disasters"

@@ -5,12 +5,14 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router';
 import { ApiProvider } from './context/ApiProvider.tsx';
 
+const randomUserNumber = String(Math.floor(Math.random() * 100) + 1).padStart(3, '0');
+
 const context = {
   kind: 'user',
-  key: 'demo-user-001',
+  key: `demo-user-${randomUserNumber}`,
   name: 'Demo Frontend User',
-  email: 'demo@email.com',
-}
+  email: `demo${randomUserNumber}@email.com`,
+};
 
 createRoot(document.getElementById('root')!).render(
   <LDProvider clientSideID={import.meta.env.VITE_LAUNCHDARKLY_CLIENT_ID} context={context}>
