@@ -1,0 +1,22 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kevin Romer",
+  "license": "None",
+  "type": "commonjs",
+  "dependencies": {
+    "@launchdarkly/node-server-sdk": "^9.9.2",
+    "@launchdarkly/server-sdk-ai": "^0.9.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "openai": "^5.5.0",
+    "pm2": "^6.0.8"
+  }
+}

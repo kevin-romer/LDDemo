@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./back
+    container_name: backend
+    ports:
+      - "4000:4000"
+    env_file:
+    - ./back/.env
+    restart: always
+
+  frontend:
+    build:
+      context: ./front
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./front/.env
+    restart: always
