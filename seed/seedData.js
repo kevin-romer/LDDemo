@@ -49,7 +49,7 @@ async function createExperiment(variationIdTrue, variationIdFalse, flagConfigVer
     name: "Disasters Test",
     key: "disasters-test",
     iteration: {
-      hypothesis: "If the disasters page is linked from the home page then users will go to the page and be more informed",
+      hypothesis: "If the disasters page has a card on the homepage with a link then users will go to the disasters page versus if there is only a link in the header",
       metrics: [
         { key: "disasters-page-viewed" }
       ],
